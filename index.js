@@ -13,7 +13,7 @@ const PORT = process.env.PORT
 
 
 app.listen(PORT, ()=>{
-    console.log(PORT, "Customer Server Started")
+    // console.log(PORT, "Customer Server Started")
 })
 mongoose.connect(CUSTOMER_URI)
 app.get("/", (req, res)=>{

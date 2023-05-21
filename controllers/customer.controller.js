@@ -78,11 +78,12 @@ const getCustomer = (req, res) => {
 
   jwt.verify(token, secret, (err, result) => {
     if (err) {
-      res.status(401).send({
+      res.status(403).send({
         status: false,
         message: "Session Expired, Please Signin Again",
+        err: err.message
       });
-      console.log(err.message);
+  
     } else {
       let { email } = result;
       // console.log(email)

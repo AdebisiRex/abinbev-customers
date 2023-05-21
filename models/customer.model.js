@@ -22,10 +22,10 @@ customerSchema.pre("save", function (next) {
 });
 
 customerSchema.methods.validatePassword = function(password,callback){
-    console.log(password)
+    // console.log(password)
     bcrypt.compare(password,this.password, (err,same)=>{
         if(!err){
-            console.log(err)
+            // console.log(err)
 
             callback(err,same)
         }else{
